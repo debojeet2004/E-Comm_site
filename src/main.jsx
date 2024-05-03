@@ -18,12 +18,6 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home/>,
-        children:[
-          // {
-          //   path: "products",
-          //   element: <Products/>
-          // }
-        ]
       },
       {
         path: "wishlist",
@@ -36,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "products",
         element: <Products/>
+      },
+      {
+        path: "login",
+        element: <div className='font-bold text-5xl p-10 text-gray-600'>Work in Progress</div>
       }
     ],
     errorElement: <Error/> ,

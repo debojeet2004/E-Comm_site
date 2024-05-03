@@ -11,7 +11,7 @@ function Footer() {
               <p>Security</p>
               <p>Privacy</p>
               <p>Infringement</p>
-              <p>© 20024-2024 Shopsi.com</p>
+              <p>© 20024-2024 Sample E-com</p>
             </div>
 
             <div className='flex gap-3 justify-end w-max'>
