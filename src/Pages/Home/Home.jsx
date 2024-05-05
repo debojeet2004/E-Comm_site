@@ -7,20 +7,21 @@ function Home() {
   return (
     <Container>
         <div className="flex flex-col gap-6  p-4">
-          {/* <div className="CATEGORY w-full  flex justify-around items-center h-[10rem] border-b border-black">
-            <Card2>Men's</Card2>
-            <Card2>Womens's</Card2>
-            <Card2>Lifestyle</Card2>
-            <Card2>Appliances</Card2>
-            <Card2>Automotive</Card2>
-          </div> */}
-
-          {/* <div className="flex flex-col gap-6  p-4">
+          <div className="CATEGORY w-full  flex justify-around items-center h-[10rem] border-b border-black">
+            <Card2 >Laptop_Mobile</Card2>
+            <Card2 >Mens</Card2>
+            <Card2 >Womens</Card2>
+            <Card2 >Lifestyle</Card2>
+            <Card2 >Home</Card2>
+            <Card2 >Automotive</Card2>
+            <Card2 >Groceries</Card2>
+          </div>
+{/* 
+          <div className="flex flex-col gap-6  p-4">
             <Card4 text={`Best of Men's`}/>
             <Card4 text={`Best of Women's`}/>
             <Card4 text={`Groceries you may need`}/>
             <Card4 text={`Home Appliances and more`}/>
-            <Card4 text={`Skincare, Fragrances, Sunglasses and more`}/>
           </div> */}
 
           <div className=" flex flex-col  items-center justify-center  flex-wrap gap-6  p-4">

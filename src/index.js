@@ -18,6 +18,8 @@ import Error from "./Pages/ErrorPage/Error";
 import Cart from "./Pages/Cart/Cart"
 import Wishlist from "./Pages/Wishlist/Wishlist"
 import Products from "./Pages/Products/Products"
+import Category from "./Pages/Category/Category"
+
 
 
 
@@ -42,4 +44,5 @@ export {
     Cart,
     Wishlist,
     Products,
+    Category,
 }

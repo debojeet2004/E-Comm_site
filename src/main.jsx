@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import {createBrowserRouter,RouterProvider} from 'react-router-dom'
-import {Cart, Error, Home, Products, Wishlist} from './index.js'
+import {Cart, Error, Home, Products, Wishlist, Category} from './index.js'
 
 
 import { store } from './redux/Store.js'
@@ -31,10 +31,14 @@ const router = createBrowserRouter([
         path: "products",
         element: <Products/>
       },
+      // {
+      //   path: "login",
+      //   element: <div className='font-bold text-5xl p-10 text-gray-600'>Work in Progress</div>
+      // },
       {
-        path: "login",
-        element: <div className='font-bold text-5xl p-10 text-gray-600'>Work in Progress</div>
-      }
+        path: "test",
+        element: <Category/>
+      },
     ],
     errorElement: <Error/> ,
   }

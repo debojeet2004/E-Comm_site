@@ -3,6 +3,7 @@ import CartSlice from './CartSlice';
 import WishSlice from './WishSlice';
 import ProductSlice from './ProductSlice';
 import ProductPageSlice from './ProductPageSlice';
+import category from './category';
 
 // const logger = (store) => (next) => (action) => {
 //     console.log("store", store);
@@ -17,6 +18,7 @@ export const store = configureStore({
         Cart: CartSlice,
         Wishlist: WishSlice,
         productPage: ProductPageSlice,
+        category: category,
     },
     // middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });

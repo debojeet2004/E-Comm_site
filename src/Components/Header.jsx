@@ -39,7 +39,7 @@ function Header() {
 
                 <div>
                 <Button
-                    NavigateTO={`/login`}
+                    // NavigateTO={`/login`}
                     classes={`border-4 border-sky-200 px-6 py-2 bg-sky-500 hover:bg-sky-700  active:bg-sky-600 rounded-md  `}
                 >Login</Button>
                 </div>

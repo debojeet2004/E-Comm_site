@@ -8,15 +8,14 @@ import { Product } from "../redux/ProductPageSlice";
 
 
 
-function Card3({ id, title, price, thumbnail, rating,brand,description,stock,category,images,discountPercentage}) {
+function Card3({ id, title, price, thumbnail, rating,brand,description,stock,category,images,discountPercentage,showbtn}) {
     const dispatch =  useDispatch()
-    const somthing = true;
+    // const somthing = true;
     return (
         <Link 
             className="border-zinc-300 hover:border-zinc-400 hover:scale-[1.04] border-2 text-black bg-white min-w-[20rem] min-h-[33rem] max-w-[20rem] max-h-[33rem] rounded-lg p-3 flex flex-col justify-between items-center"
             onClick={() => dispatch(Product({id, title, price, thumbnail, rating,brand,description,stock,category,discountPercentage,images}))}
-            to="products"
-            // onclick={() => console.log("hmm")}
+            to="/products"
             >
             <img className='w-full bg-contain bg-center h-[17rem] border border-gray-200' src={thumbnail} alt="image" />
             <div className=" w-full flex justify-between items-center p-1 ">
@@ -40,14 +39,7 @@ function Card3({ id, title, price, thumbnail, rating,brand,description,stock,cat
             </div>
             <div className="w-full flex justify-between items-center">
 
-            {somthing ? (
-                <div className="w-full flex justify-center items-center">
-                    <Button
-                        NavigateTO="/products"
-                        classes={'w-[100%] h-[3rem] bg-sky-500 hover:bg-sky-700 active:bg-sky-600'} 
-                    >Show more</Button>
-                </div>
-            ) : (
+            {showbtn ? (
                 <div className="w-full flex justify-between items-center">
                     <Button 
                         classes={'w-[45%] h-[3rem] bg-sky-500 hover:bg-sky-700 active:bg-sky-600'} 
@@ -62,7 +54,14 @@ function Card3({ id, title, price, thumbnail, rating,brand,description,stock,cat
                     Buy Now
                     </Button>
                 </div>
-            )}
+            ) : (
+                <div className="w-full flex justify-center items-center">
+                    <Button
+                        NavigateTO="/products"
+                        classes={'w-[100%] h-[3rem] bg-sky-500 hover:bg-sky-700 active:bg-sky-600'} 
+                    >Show more</Button>
+                </div>
+            ) }
             </div>
             
         </Link>

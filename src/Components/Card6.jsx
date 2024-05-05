@@ -2,22 +2,37 @@ import { useDispatch } from "react-redux"
 import { Brand, Delivery, Replacement, Setup, Warranty } from "../Assets/assets"
 import {Button, Card5,} from "../index"
 import { addItem } from "../redux/CartSlice"
+import { useState } from "react"
 
 function Card6({id,title,category,description,brand,rating,stock,discount,price,images,thumbnail}) {
     const  dispatch = useDispatch()
+    const [hoveredImage, setHoveredImage] = useState(null);
+    const [thumbnailSource, setThumbnailSource] = useState(thumbnail);
+
+    const handleMouseEnter = (image) => {
+        setHoveredImage(image);
+        setThumbnailSource(image);
+    };
+
     return (
         <div className="p-2 flex justify-between gap-2">
                 <div className=" w-fit h-fit p-4">
                     <div className="w-[40rem] h-[40rem] p-4 flex gap-2">
-                        <div className="border border-gray-200 w-[20%] h-full flex flex-col">
-                            <img src={images[0]} alt="" className="w-full h-[8rem] " />
-                            <img src={images[1]} alt="" className="w-full h-[8rem] " />
-                            <img src={images[2]} alt="" className="w-full h-[8rem] " />
-                            <img src={images[3]} alt="" className="w-full h-[8rem] " />
-                            <img src={images[4]} alt="" className="w-full h-[8rem] " />
+                        <div className="border border-gray-600 w-[20%] h-full flex flex-col">
+                            {/* Iterate over the images array */}
+                            {images.map((image, index) => (
+                                <img
+                                    key={index}
+                                    src={image}
+                                    alt="image"
+                                    className="MINI-IMG w-full h-[8rem]"
+                                    onMouseEnter={() => handleMouseEnter(image)}
+                                />
+                            ))}
                         </div>
-                        <div className="border border-gray-300 w-full h-full ">
-                            <img src={thumbnail} alt="" className="bg-cover bg-center w-full h-full"/>
+                        <div className="border border-gray-600 w-full h-full">
+                            {/* Display the thumbnail image */}
+                            <img src={thumbnailSource} alt="" className="BIG-IMG bg-cover bg-center w-full h-full" />
                         </div>
                     </div>
                     <div className="flex justify-center gap-10  py-4">
@@ -27,6 +42,7 @@ function Card6({id,title,category,description,brand,rating,stock,discount,price,
                             >Add to Cart</Button>
                         <Button classes={`w-[50%] h-[3rem] bg-amber-700 hover:bg-amber-800 active:bg-amber-600`}>Buy Now</Button>
                     </div>
+                    
                 </div>
 
                 <div className=" w-[60%] p-4 flex flex-col justify-around gap-10">
